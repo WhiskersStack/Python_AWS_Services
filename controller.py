@@ -1,7 +1,7 @@
 import subprocess
 import time
 
-sec = 10
+sec = 5
 
 print("\n*** Welcome to AWS Services ***\n")
 
