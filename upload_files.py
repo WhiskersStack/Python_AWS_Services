@@ -6,7 +6,6 @@ print("\nPreparing to upload all the sales reports from the report folder...\n")
 
 sales_folder = "./reports"
 bucket_name1 = "sales-report-document"
-bucket_name2 = "sales-report-document-sr1"
 prefix = "customer-details/"
 
 s3 = boto3.client("s3")
