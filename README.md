@@ -55,7 +55,7 @@ pip install boto3
 
 The default recipient email is set in `sns.py`:
 ```python
-email = "system32j@gmail.com"
+email = "your-email@gmail.com"
 ```
 
 Change it to your preferred email address.
