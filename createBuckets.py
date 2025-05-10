@@ -25,4 +25,4 @@ create_bucket(bucket_name1)
 print("\nAttempting to create the first bucket 'sales-report-document-sr1'...\n")
 create_bucket(bucket_name2)
 
-print("\n******** End of script ********\n")
+print("\n******** Creating process finished ********\n")
