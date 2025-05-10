@@ -1,28 +1,35 @@
 import subprocess
 import time
 
-sec = 2
+sec = 3
 
 print("\n*** Welcome to AWS Services ***\n")
-print("\nFirst you need to confirm your email, sending request...")
 
-subprocess.run(["python3", "sns.py"])
+sub = input("\nAre you subscribed to sns? (yes/no) : ")
 
-answer = input("Did you confirmed the request? (yes/no) : ")
+if sub.lower() == 'no':
+    print("\nFirst you need to confirm your email, sending request...")
+    subprocess.run(["python3", "sns.py"])
+    answer = input("Did you confirmed the request? (yes/no) : ")
+else:
+    answer = 'yes'
 
 if answer.lower() == 'yes':
-    print("\nGood Lets continue...\n\n\n")
+    print("\nOk launching the program, Loading...\n")
+    time.sleep(sec)
+
     subprocess.run(["python3", "createBuckets.py"])
 
+    print("\nLoading...\n")
     time.sleep(sec)
 
     subprocess.run(["python3", "upload_files.py"])
 
+    print("\nLoading...\n")
     time.sleep(sec)
 
     subprocess.run(["python3", "list_and_move.py"])
 
-    time.sleep(sec)
 else:
     print("\n\n******** Process aborted ********\n\n")
 
