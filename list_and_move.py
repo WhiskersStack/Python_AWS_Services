@@ -33,4 +33,4 @@ for obj in all_objects["Contents"]:
 if not if_sr1:
     print("\n*** No sr1 files found, process completed! ***\n")
 else:
-    print("\n*** Moving the files completed! ***\n")
+    print("\n*** Moving and deleting the files completed! ***\n")
