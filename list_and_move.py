@@ -1,4 +1,5 @@
 import boto3
+import sns
 
 print(
     "\n******\n\nListing all the objects from 'sr1',\ninside the 'sales-report-document' bucket,\nin the 'customer-details' folder...\n\n******\n"
@@ -16,7 +17,7 @@ i = 1
 if_sr1 = False
 
 for obj in all_objects["Contents"]:
-    if 'sr1' in obj['Key']:
+    if "sr1" in obj["Key"]:
         if_sr1 = True
         print(f"\n{i}. {obj}\n")
 
@@ -34,3 +35,4 @@ if not if_sr1:
     print("\n*** No sr1 files found, process completed! ***\n")
 else:
     print("\n*** Moving and deleting the files completed! ***\n")
+    sns.move_alert()
