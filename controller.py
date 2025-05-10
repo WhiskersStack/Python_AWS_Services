@@ -1,7 +1,7 @@
 import subprocess
 import time
 
-sec = 3
+sec = 10
 
 print("\n*** Welcome to AWS Services ***\n")
 
@@ -34,5 +34,4 @@ else:
     print("\n\n******** Process aborted ********\n\n")
 
 
-print("\n****************** End of program ******************\n")
 print("\n****************** GoodBye ******************\n")
